@@ -3,13 +3,9 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "messaging-sender-ui": {
+    "messaging-receiver-ui": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss"
-        }
-      },
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -17,14 +13,13 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/messaging-sender-ui",
+            "outputPath": "dist/messaging-receiver-ui",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
             "tsConfig": "tsconfig.app.json",
-            "inlineStyleLanguage": "scss",
             "assets": [
               {
                 "glob": "**/*",
@@ -32,7 +27,6 @@
               }
             ],
             "styles": [
-              "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -63,15 +57,15 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "port": 4201
-          },
+		   "options": {
+			"port": 4200
+		  },
           "configurations": {
             "production": {
-              "buildTarget": "messaging-sender-ui:build:production"
+              "buildTarget": "messaging-receiver-ui:build:production"
             },
             "development": {
-              "buildTarget": "messaging-sender-ui:build:development"
+              "buildTarget": "messaging-receiver-ui:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -87,7 +81,6 @@
               "zone.js/testing"
             ],
             "tsConfig": "tsconfig.spec.json",
-            "inlineStyleLanguage": "scss",
             "assets": [
               {
                 "glob": "**/*",
@@ -95,8 +88,7 @@
               }
             ],
             "styles": [
-              "@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.scss"
+              "src/styles.css"
             ],
             "scripts": []
           }

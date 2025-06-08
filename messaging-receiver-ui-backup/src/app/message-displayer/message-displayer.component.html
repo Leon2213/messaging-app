@@ -1,0 +1,33 @@
+<mat-card>
+  <mat-card-title>
+    Meddelandeloggen
+    <span class="status" [ngClass]="connectionStatus">
+      {{ connectionStatus === 'connected' ? '🟢 Ansluten' : 
+         connectionStatus === 'error' ? '🔴 Fel' : '🟡 Inte ansluten' }}
+    </span>
+  </mat-card-title>
+  
+  <mat-card-content>
+    <div class="controls">
+      <button mat-raised-button (click)="reconnect()" 
+              [disabled]="connectionStatus === 'connected'">
+        Återanslut
+      </button>
+      
+      <button mat-raised-button color="warn" (click)="clearMessages()">
+        Rensa
+      </button>
+    </div>
+    
+    <div #logContainer class="message-log">
+      <div *ngFor="let entry of messages" class="message">
+        <strong>{{ entry.timestamp | date:'HH:mm:ss' }}</strong>
+        [{{ entry.type }}]: {{ entry.message }}
+      </div>
+      
+      <div *ngIf="messages.length === 0" class="no-messages">
+        Väntar på meddelanden...
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
