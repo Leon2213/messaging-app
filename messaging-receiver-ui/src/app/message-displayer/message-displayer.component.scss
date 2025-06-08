@@ -1,0 +1,51 @@
+.status {
+  float: right;
+  font-size: 0.8em;
+  padding: 4px 8px;
+  border-radius: 4px;
+  
+  &.connected {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  &.disconnected {
+    background-color: #ff9800;
+    color: white;
+  }
+  
+  &.error {
+    background-color: #f44336;
+    color: white;
+  }
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.message-log {
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  padding: 10px;
+  background-color: #fafafa;
+}
+
+.message {
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+  
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.no-messages {
+  text-align: center;
+  color: #999;
+  padding: 20px;
+  font-style: italic;
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/messaging-system.iml" filepath="$PROJECT_DIR$/.idea/messaging-system.iml" />
+      <module fileurl="file://$PROJECT_DIR$/receiver-backend/receiver-backend/receiver-backend.iml" filepath="$PROJECT_DIR$/receiver-backend/receiver-backend/receiver-backend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sender-backend/sender-backend/sender-backend.iml" filepath="$PROJECT_DIR$/sender-backend/sender-backend/sender-backend.iml" />
+    </modules>
+  </component>
+</project>
